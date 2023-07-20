@@ -3,21 +3,20 @@ import random
 
 # Función para crear una matriz
 def randomMatrix(number):
-    # Si el parametro introducido no es válido
-    matrix = []
-    if (number < 1) or (isinstance(number, int) == False):
-        matrix = ['No funciona']
-        # raise ValueError
     # Matriz vacía
+    matrix = []
+    # Si el parametro introducido no es válido
+    if (number < 1) or (isinstance(number, int) == False):
+        raise ValueError
     # Ciclo for para rellenar la matriz de números aleatorios
     for i in range(number):
         a = []
         for j in range(number):
-            # se añade un número al array entre 0 y 9
+            # Se añade un número al array entre 0 y 9
             a.append(random.randrange(10))
-        # Introducimos el array en la matriz
+        # Introduce el array en la matriz
         matrix.append(a)
-    # Se devuelve la matriz al final de la función
+    # Se devuelve la matriz final
     return matrix
 
 # Función para imprimir la matriz
