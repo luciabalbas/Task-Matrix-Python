@@ -1,6 +1,9 @@
+# Importa las funciones del archivo matrix.py
 import matrix
+# Importa las funciones del archivo sums.py
+import sums
 
-# Creamos un bucle infinito que pide un número entero para crear la matriz
+# Un bucle infinito que pide un número entero para crear la matriz
 while True:
     try:
         number = int(input('Introduzca el número de filas y columnas para la matriz: '))
@@ -14,7 +17,24 @@ while True:
     except:
         print('Debe introducir un número entero y positivo. Por favor, inténtelo de nuevo.')
     
-matriz = matrix.randomMatrix(number)
+# Crea una matriz según la función 
+matriz_1 = matrix.randomMatrix(number)
 
-matrix.printMatrix(matriz)
+# Imprime la matriz según la función
+matrix.printMatrix(matriz_1)
 
+# Suma las filas de la matriz
+sumRows = sums.addsRows(matriz_1)
+
+# Suma las columnas de la matriz
+sumColums = sums.addsColumns(matriz_1)
+
+# Imprimir el array de la suma de las filas de la matriz
+print()
+for i in range(number):
+    print(f'La suma de la fila {i+1} es {sumRows[i]}')
+
+# Imprimir el array de la suma de columnas de la matriz
+print()
+for j in range(number):
+    print(f'La suma de la columna {j+1} es {sumColums[j]}')
