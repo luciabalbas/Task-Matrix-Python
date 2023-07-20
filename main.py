@@ -7,7 +7,7 @@ import sums
 while True:
     try:
         number = int(input('Introduzca el número de filas y columnas para la matriz: '))
-        # Si el número introducir un número negativo o 0 lanza un error
+        # Si el número introducido es negativo o 0 lanza un error
         if number < 1:
             raise ValueError 
         # En caso de introducir un número correcto, el bucle se rompe
