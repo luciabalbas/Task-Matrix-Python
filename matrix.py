@@ -13,7 +13,7 @@ def randomMatrix(number):
         a = []
         for j in range(number):
             # Se añade un número al array entre 0 y 9
-            a.append(random.randrange(10))
+            a.append(random.randint(0, 9))
         # Introduce el array en la matriz
         matrix.append(a)
     # Se devuelve la matriz final
