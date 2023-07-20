@@ -21,6 +21,7 @@ while True:
 matriz_1 = matrix.randomMatrix(number)
 
 # Imprime la matriz según la función
+print(f'Matriz {number}x{number}:')
 matrix.printMatrix(matriz_1)
 
 # Suma las filas de la matriz
